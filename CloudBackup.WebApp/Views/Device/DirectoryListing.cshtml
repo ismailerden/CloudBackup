@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = "_ModalLayout";
+}
+@section Scripts{
+<script src="~/jstree/jstree.js"></script>
+<script src="~/Scripts/device_directorylisting.js"></script>
+    <script>
+        $(document).ready(function () {
+         $(".CloseModal").click(function () {
+                    parent.$('#modal-').modal('toggle');
+            });
+            
+            device_directorylisting.init(common.GetUrlVars()["htmlElement"], '@ViewBag.DeviceId','@ViewBag.CloudId');
+        });
+    </script>
+}
+@section Heads {
+    <link href="~/jstree/themes/default/style.css" rel="stylesheet" />
+}
+<input type="hidden" id="selectedDirectory" />
+<div class="modal-header">
+    <button type="button" class="close CloseModal" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Klasör Listesi</h4>
+</div>
+
+<div class="modal-body">
+
+    @*<div><span style="font-style:italic; margin-right:5px;"> Son Güncellenme Tarihi : 23.09.2018 </span> <button class="btn btn-primary btn-xs ClickRefresh">Yenile</button></div>*@
+    <div id="treeView">
+        <ul>
+            <li>
+                Root node 1
+               
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default pull-left CloseModal" data-dismiss="modal">Kapat</button>
+    <button id="btnChoose" type="button" class="btn btn-primary">Seç</button>
+</div>
+

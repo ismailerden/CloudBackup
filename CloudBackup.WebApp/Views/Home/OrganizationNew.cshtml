@@ -1,0 +1,66 @@
+﻿@model CloudBackup.Database.ViewModel.CreateModel.OrganizationInsertModel
+@{
+    Layout = "_ModalLayout";
+}
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+
+        @if(Model.CloseModal)
+        {
+            @:top.$('#modal-').modal('toggle');
+        }
+
+        $(".CloseModal").click(function () {
+                    top.$('#modal-').modal('toggle');
+                });
+        });
+    </script>
+}
+@section Heads {
+
+}
+
+<div class="modal-header">
+    <button type="button" class="close CloseModal" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Kurum Ekle</h4>
+</div>
+<form role="form" asp-controller="Home" asp-action="OrganizationNew">
+    <div class="modal-body">
+        <input type="hidden" asp-for="HashedId" />
+        <!-- text input -->
+        <div class="form-group">
+            <label>Organizasyon ismi </label>
+            <input type="text" asp-for="Name" class="form-control" placeholder="Organizasyon ismini giriniz">
+        </div>
+        <!-- text input -->
+        <div class="form-group">
+            <label>Yetkili isim soyisim </label>
+            <input type="text" asp-for="PersonFullName" class="form-control" placeholder="Yetkili isim soyisim">
+        </div>
+        <div class="form-group">
+            <label>Yetkili mail adresi </label>
+            <input type="text" asp-for="ContactEmail" class="form-control" placeholder="Yetkili mail adresi">
+        </div>
+        <div class="form-group">
+            <label>Adresler </label>
+            <textarea rows="5" type="text" asp-for="AddressBindings" class="form-control" placeholder="Yetkili mail adresi"></textarea>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left CloseModal" data-dismiss="modal">Kapat</button>
+        @if (String.IsNullOrEmpty(Model.HashedId))
+        {
+            <button type="submit" class="btn btn-primary">Ekle</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-primary">Düzenle</button>
+        }
+    </div>
+
+</form>

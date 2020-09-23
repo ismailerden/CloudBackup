@@ -1,0 +1,222 @@
+﻿@model CloudBackup.Database.ViewModel.CreateModel.DevicePlanInsertModel
+@{
+    Layout = "_ModalLayout";
+    List<CloudBackup.Database.ViewModel.ViewSelectList> planList = (List<CloudBackup.Database.ViewModel.ViewSelectList>)ViewBag.Platforms;
+}
+
+@section Scripts{
+    <script src="~/Scripts/device_newjob.js"></script>
+    <script>
+         function ChooseDirectory(directory,htmlElement) {
+            $('#' + htmlElement).val(directory); console.log(directory);
+        };
+        $(document).ready(function () {
+
+            @if(Model.CloseModal)
+        {
+            @:top.$('#modal-').modal('toggle');
+        }
+
+        $(".CloseModal").click(function () {
+                    top.$('#modal-').modal('toggle');
+                });
+
+
+            $(".cllickCloudDirectory").click(function () {
+                common.openModal('/Device/DirectoryListing?htmlElement=inptRemoteDirectory&cloudId=' + $("#HashedPlanId").val(),'300px')
+            });
+
+
+
+            device_newjob.init();
+        });
+    </script>
+}
+@section Heads {
+
+}
+
+<div class="modal-header">
+    <button type="button" class="close CloseModal" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Plan Ekle</h4>
+</div>
+<form role="form" asp-action="NewJob" asp-controller="Device">
+    <div class="modal-body">
+        <input type="hidden" asp-for="HashedDevicePlanId" />
+        <input type="hidden" asp-for="DeviceHashedId" />
+        <!-- text input -->
+        <div class="form-group">
+            <label>Plan Adı </label>
+            <input type="text" asp-for="Name" class="form-control" placeholder="Plan Adını Giriniz">
+        </div>
+        <!-- text input -->
+        <div class="form-group">
+            <label>Plan Açıklaması </label>
+            <textarea type="text" asp-for="Description" class="form-control" placeholder="Plan Açıklaması Giriniz"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Yedeklenecek İşleminin Başlayacağı Tarih Saat  </label>
+            <div class="input-group date" style="float:left; width:50%;">
+                <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <input type="text" asp-for="BackupStartDate" class="form-control pull-right" id="datepicker">
+            </div>
+            <div class="input-group" style="float:left; width:50%;">
+                <input asp-for="BackupStartTime" type="text" class="form-control timepicker">
+                <div class="input-group-addon">
+                    <i class="fa fa-clock-o"></i>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="form-group">
+            <label>Yedekleme Sıklığı</label>
+            <select asp-for="RetryPlan" class="form-control">
+                @foreach (var item in Enum.GetValues(typeof(CloudBackup.Database.Enum.RetryPlan)))
+                {
+                    CloudBackup.Database.Enum.RetryPlan pl = ((CloudBackup.Database.Enum.RetryPlan)(int)item);
+                    if (pl == CloudBackup.Database.Enum.RetryPlan.OneTime)
+                    {
+                        <option value="@((int)item)">Bir kere </option>
+                    }
+                    if (pl == CloudBackup.Database.Enum.RetryPlan.Minute30)
+                    {
+                        <option value="@((int)item)">30 dakika da bir </option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Hour1)
+                    {
+                        <option value="@((int)item)"> Her saat </option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Hour3)
+                    {
+                        <option value="@((int)item)">3 saate bir </option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Hour6)
+                    {
+                        <option value="@((int)item)">6 saate bir </option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Hour12)
+                    {
+                        <option value="@((int)item)">12 saate bir </option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day1)
+                    {
+                        <option value="@((int)item)">Her Gün</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day2)
+                    {
+                        <option value="@((int)item)">2 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day3)
+                    {
+                        <option value="@((int)item)">3 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day4)
+                    {
+                        <option value="@((int)item)">4 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day5)
+                    {
+                        <option value="@((int)item)">5 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day6)
+                    {
+                        <option value="@((int)item)">6 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day7)
+                    {
+                        <option value="@((int)item)">7 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day8)
+                    {
+                        <option value="@((int)item)">8 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day9)
+                    {
+                        <option value="@((int)item)">9 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Day10)
+                    {
+                        <option value="@((int)item)">10 günde bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Month1)
+                    {
+                        <option value="@((int)item)">Ayda bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Month2)
+                    {
+                        <option value="@((int)item)">2 ayda bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Month3)
+                    {
+                        <option value="@((int)item)">3 ayda bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Month4)
+                    {
+                        <option value="@((int)item)">4 ayda bir</option>
+                    }
+                    else if (pl == CloudBackup.Database.Enum.RetryPlan.Year1)
+                    {
+                        <option value="@((int)item)">Senede bir</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Yedeklenecek Platform</label>
+            <select asp-for="HashedPlanId" class="form-control">
+                @foreach (var item in planList)
+                {
+                    if (item.RealId == Model.PlanId)
+                    {
+                        <option selected="selected" value="@item.Id">@item.Text</option>
+                    }
+                    else
+                    {
+                        <option value="@item.Id">@item.Text</option>
+                    }
+
+                }
+            </select>
+        </div>
+        <div class="" style="margin-bottom:15px;">
+            <label>Bilgisayarda Yedeklenecek Klasör</label>
+
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-danger ModalPopup" data-post-url="/Device/DirectoryListing?htmlElement=inptLocalDirectory&deviceId=@Model.DeviceHashedId" data-height="300px">Seç</a>
+                </div>
+                <!-- /btn-group -->
+                <input id="inptLocalDirectory" asp-for="LocalSource" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="" style="margin-bottom:15px;">
+            <label>Bulutta Yedeklenecek Klasör</label>
+
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-danger cllickCloudDirectory" >Seç</a>
+                </div>
+                <!-- /btn-group -->
+                <input id="inptRemoteDirectory" asp-for="RemoteSource" type="text" class="form-control">
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left CloseModal" data-dismiss="modal">Kapat</button>
+        @if (String.IsNullOrEmpty(Model.HashedDevicePlanId))
+        {
+            <button type="submit" class="btn btn-primary">Ekle</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-primary">Düzenle</button>
+        }
+
+    </div>
+
+</form>

@@ -1,0 +1,9 @@
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\bin\Release\netcoreapp2.0\CloudBackup.Platforms.deps.json
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\bin\Release\netcoreapp2.0\CloudBackup.Platforms.dll
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\bin\Release\netcoreapp2.0\CloudBackup.Platforms.pdb
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\obj\Release\netcoreapp2.0\CloudBackup.Platforms.csprojAssemblyReference.cache
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\obj\Release\netcoreapp2.0\CloudBackup.Platforms.csproj.CoreCompileInputs.cache
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\obj\Release\netcoreapp2.0\CloudBackup.Platforms.AssemblyInfoInputs.cache
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\obj\Release\netcoreapp2.0\CloudBackup.Platforms.AssemblyInfo.cs
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\obj\Release\netcoreapp2.0\CloudBackup.Platforms.dll
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\obj\Release\netcoreapp2.0\CloudBackup.Platforms.pdb

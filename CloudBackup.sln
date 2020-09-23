@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudBackup.WebApp", "CloudBackup.WebApp\CloudBackup.WebApp.csproj", "{664B99DD-3E59-4716-9F6F-B0E49E2C8169}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudBackup.Database", "CloudBackup.Database\CloudBackup.Database.csproj", "{DE590E7D-0C29-4620-A099-120F2198247F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBackup.WindowsService", "CloudBackup.WindowsService\CloudBackup.WindowsService.csproj", "{EEDC9AC1-B7AB-4917-9230-3F2D8C1B8BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBackup.WindowsAppControlService", "CloudBackup.WindowsAppControlService\CloudBackup.WindowsAppControlService.csproj", "{21DF719E-1753-44C0-9C66-2940AD921538}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudBackup.WebPlatforms", "CloudBackup.Platforms\CloudBackup.WebPlatforms.csproj", "{7124EE01-DB5B-40D7-97F5-F9FE2775EE17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBackup.WinPlatform", "CloudBackup.WinPlatform\CloudBackup.WinPlatform.csproj", "{C1827DD9-04CE-430B-BA6D-596B430FC87A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CloudBackup.Install", "CloudBackup.Install\CloudBackup.Install.vdproj", "{BFBEE51E-5654-4CE5-B8E2-70161C2EE5ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{664B99DD-3E59-4716-9F6F-B0E49E2C8169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664B99DD-3E59-4716-9F6F-B0E49E2C8169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664B99DD-3E59-4716-9F6F-B0E49E2C8169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664B99DD-3E59-4716-9F6F-B0E49E2C8169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE590E7D-0C29-4620-A099-120F2198247F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE590E7D-0C29-4620-A099-120F2198247F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE590E7D-0C29-4620-A099-120F2198247F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE590E7D-0C29-4620-A099-120F2198247F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEDC9AC1-B7AB-4917-9230-3F2D8C1B8BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEDC9AC1-B7AB-4917-9230-3F2D8C1B8BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEDC9AC1-B7AB-4917-9230-3F2D8C1B8BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEDC9AC1-B7AB-4917-9230-3F2D8C1B8BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21DF719E-1753-44C0-9C66-2940AD921538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21DF719E-1753-44C0-9C66-2940AD921538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21DF719E-1753-44C0-9C66-2940AD921538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21DF719E-1753-44C0-9C66-2940AD921538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7124EE01-DB5B-40D7-97F5-F9FE2775EE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7124EE01-DB5B-40D7-97F5-F9FE2775EE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7124EE01-DB5B-40D7-97F5-F9FE2775EE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7124EE01-DB5B-40D7-97F5-F9FE2775EE17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1827DD9-04CE-430B-BA6D-596B430FC87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1827DD9-04CE-430B-BA6D-596B430FC87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1827DD9-04CE-430B-BA6D-596B430FC87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1827DD9-04CE-430B-BA6D-596B430FC87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBEE51E-5654-4CE5-B8E2-70161C2EE5ED}.Debug|Any CPU.ActiveCfg = Debug
+		{BFBEE51E-5654-4CE5-B8E2-70161C2EE5ED}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4F344F4-D1E3-4003-BB01-7266FC69BBC0}
+	EndGlobalSection
+EndGlobal

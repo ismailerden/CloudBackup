@@ -1,0 +1,496 @@
+2018-12-21T21:03:21.6619896+03:00 0HLJ7DQ3KFLAD:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (The AWS Access Key Id you provided does not exist in our records.) ---> Amazon.S3.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at CloudBackup.WebPlatforms.AmazonS3.AmazonS3.GetDirectoryList(String directory, String accessToken) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\AmazonS3\AmazonS3.cs:line 63
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at CloudBackup.WebApp.Controllers.DeviceController.GetAmazonS3List(Int32 planId, String directory, PlatformInsertModel planData) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 656
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId, String cloudId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 697
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+---> (Inner Exception #0) Amazon.S3.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)<---
+
+2018-12-21T21:06:19.3423091+03:00 0HLJ7DQ3KFLAD:00000007 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (The AWS Access Key Id you provided does not exist in our records.) ---> Amazon.S3.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at CloudBackup.WebPlatforms.AmazonS3.AmazonS3.GetDirectoryList(String directory, String accessToken) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\AmazonS3\AmazonS3.cs:line 63
+   at CloudBackup.WebApp.Controllers.DeviceController.GetAmazonS3List(Int32 planId, String directory, PlatformInsertModel planData) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 656
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId, String cloudId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 697
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+---> (Inner Exception #0) Amazon.S3.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)<---
+
+2018-12-21T21:06:58.4339360+03:00 0HLJ7DQ3KFLAD:00000016 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (The AWS Access Key Id you provided does not exist in our records.) ---> Amazon.S3.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at CloudBackup.WebPlatforms.AmazonS3.AmazonS3.GetDirectoryList(String directory, String accessToken) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\AmazonS3\AmazonS3.cs:line 63
+   at CloudBackup.WebApp.Controllers.DeviceController.GetAmazonS3List(Int32 planId, String directory, PlatformInsertModel planData) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 656
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId, String cloudId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 697
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+---> (Inner Exception #0) Amazon.S3.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)<---
+
+2018-12-21T21:07:29.7361743+03:00 0HLJ7DQ3KFLAD:00000018 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (The AWS Access Key Id you provided does not exist in our records.) ---> Amazon.S3.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at CloudBackup.WebPlatforms.AmazonS3.AmazonS3.GetDirectoryList(String directory, String accessToken) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\AmazonS3\AmazonS3.cs:line 63
+   at CloudBackup.WebApp.Controllers.DeviceController.GetAmazonS3List(Int32 planId, String directory, PlatformInsertModel planData) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 656
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId, String cloudId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 697
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+---> (Inner Exception #0) Amazon.S3.AmazonS3Exception: The AWS Access Key Id you provided does not exist in our records. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)<---
+
+2018-12-21T21:09:07.5213770+03:00 0HLJ7DQ3KFLAD:0000002D [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (The specified bucket is not valid.) ---> Amazon.S3.AmazonS3Exception: The specified bucket is not valid. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at CloudBackup.WebPlatforms.AmazonS3.AmazonS3.GetDirectoryList(String directory, String accessToken) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\AmazonS3\AmazonS3.cs:line 93
+   at CloudBackup.WebApp.Controllers.DeviceController.GetAmazonS3List(Int32 planId, String directory, PlatformInsertModel planData) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 656
+   at CloudBackup.WebApp.Controllers.DeviceController.GetParentDirectoryListing(String directoryId, String deviceId, String cloudId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 591
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+---> (Inner Exception #0) Amazon.S3.AmazonS3Exception: The specified bucket is not valid. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)<---
+
+2018-12-21T21:09:15.3399835+03:00 0HLJ7DQ3KFLAD:0000002E [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.AggregateException: One or more errors occurred. (The specified bucket is not valid.) ---> Amazon.S3.AmazonS3Exception: The specified bucket is not valid. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at CloudBackup.WebPlatforms.AmazonS3.AmazonS3.GetDirectoryList(String directory, String accessToken) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.Platforms\AmazonS3\AmazonS3.cs:line 93
+   at CloudBackup.WebApp.Controllers.DeviceController.GetAmazonS3List(Int32 planId, String directory, PlatformInsertModel planData) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 656
+   at CloudBackup.WebApp.Controllers.DeviceController.GetParentDirectoryListing(String directoryId, String deviceId, String cloudId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 591
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+---> (Inner Exception #0) Amazon.S3.AmazonS3Exception: The specified bucket is not valid. ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\_mobile\HttpRequestMessageFactory.cs:line 539
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\HttpHandler\HttpHandler.cs:line 175
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\HttpErrorResponseExceptionHandler.cs:line 60
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 212
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\ErrorHandler\ErrorHandler.cs:line 104
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\Handlers\CredentialsRetriever.cs:line 98
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext) in E:\JenkinsWorkspaces\v3-trebuchet-release\AWSDotNetPublic\sdk\src\Core\Amazon.Runtime\Pipeline\RetryHandler\RetryHandler.cs:line 137
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)<---
+
+2018-12-21T22:20:04.1566025+03:00 0HLJ7F47M9E3G:00000006 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.TimeoutException: The operation has timed out.
+   at Npgsql.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 300
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Hangfire.PostgreSql.PostgreSqlMonitoringApi.UseConnection[T](Func`2 action)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Hangfire.Dashboard.DashboardMetrics.<>c.<.cctor>b__1_0(RazorPage page)
+   at Hangfire.Dashboard.JsonStats.Dispatch(DashboardContext context)
+   at Hangfire.Dashboard.AspNetCoreDashboardMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-12-21T22:20:04.1566315+03:00 0HLJ7F47M9E37:00000006 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.TimeoutException: The operation has timed out.
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 438
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 304
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Hangfire.PostgreSql.PostgreSqlStorage.CreateAndOpenConnection()
+   at Hangfire.PostgreSql.PostgreSqlStorage.GetConnection()
+   at Hangfire.Dashboard.DashboardMetrics.<>c.<.cctor>b__1_2(RazorPage page)
+   at Hangfire.Dashboard.JsonStats.Dispatch(DashboardContext context)
+   at Hangfire.Dashboard.AspNetCoreDashboardMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-12-21T22:20:04.1566029+03:00 0HLJ7F47M9E3E:00000006 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.TimeoutException: The operation has timed out.
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 438
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 304
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Hangfire.PostgreSql.PostgreSqlStorage.CreateAndOpenConnection()
+   at Hangfire.PostgreSql.PostgreSqlStorage.GetConnection()
+   at Hangfire.Dashboard.DashboardMetrics.<>c.<.cctor>b__1_11(RazorPage page)
+   at Hangfire.Dashboard.JsonStats.Dispatch(DashboardContext context)
+   at Hangfire.Dashboard.AspNetCoreDashboardMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-12-21T23:42:07.6415471+03:00 0HLJ7GH2Q34SU:00000019 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(ReadOnlySpan`1 str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(ReadOnlySpan`1 value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDecimal(String value)
+   at CloudBackup.WebApp.Api.DeviceController.FinishDevicePlan(BackupLogModel checkModel, Int32 deviceplanid) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Api\DeviceController.cs:line 138
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

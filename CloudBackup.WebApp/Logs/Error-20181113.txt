@@ -1,0 +1,294 @@
+2018-11-13T22:22:01.1347466+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:23:00.1992740+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:24:00.2416983+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:25:00.2901300+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:26:01.1513159+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:28:00.8311443+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:29:09.4950707+03:00 0HLI9JOTD1H7O:00000005 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CloudBackup.WebApp.Core.HangfireProvider.SendQueue(Int32 deviceId, String type, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 30
+   at CloudBackup.WebApp.Core.HangfireProvider.SendFileListCommand(Int32 deviceId, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 21
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 562
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-13T22:29:22.1416623+03:00 0HLI9JOTD1H7O:00000006 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CloudBackup.WebApp.Core.HangfireProvider.SendQueue(Int32 deviceId, String type, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 30
+   at CloudBackup.WebApp.Core.HangfireProvider.SendFileListCommand(Int32 deviceId, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 21
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 562
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-13T22:30:00.6053847+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:36:48.3148212+03:00 0HLI9JSHM0NP8:00000009 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CloudBackup.WebApp.Core.HangfireProvider.SendQueue(Int32 deviceId, String type, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 30
+   at CloudBackup.WebApp.Core.HangfireProvider.SendFileListCommand(Int32 deviceId, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 21
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 562
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-13T22:37:58.7820123+03:00 0HLI9JSHM0NP8:0000000A [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CloudBackup.WebApp.Core.HangfireProvider.SendQueue(Int32 deviceId, String type, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 30
+   at CloudBackup.WebApp.Core.HangfireProvider.SendFileListCommand(Int32 deviceId, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 21
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 562
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-13T22:38:00.8429030+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:38:09.8724614+03:00 0HLI9JSHM0NP8:0000000B [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CloudBackup.WebApp.Core.HangfireProvider.SendQueue(Int32 deviceId, String type, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 30
+   at CloudBackup.WebApp.Core.HangfireProvider.SendFileListCommand(Int32 deviceId, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 21
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 562
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-13T22:38:30.2491274+03:00 0HLI9JSHM0NP8:0000000D [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CloudBackup.WebApp.Core.HangfireProvider.SendQueue(Int32 deviceId, String type, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 30
+   at CloudBackup.WebApp.Core.HangfireProvider.SendFileListCommand(Int32 deviceId, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 21
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 562
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-13T22:39:00.8435475+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:41:16.7839819+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:49:56.5982382+03:00 0HLI9K49VMC2F:00000004 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CloudBackup.WebApp.Core.HangfireProvider.SendQueue(Int32 deviceId, String type, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 30
+   at CloudBackup.WebApp.Core.HangfireProvider.SendFileListCommand(Int32 deviceId, Int32 organizationId, String directory) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Core\HangfireProvider.cs:line 21
+   at CloudBackup.WebApp.Controllers.DeviceController.GetRootDirectoryListing(String deviceId) in C:\Kişisel\Projeler\CloudBackup\CloudBackup.WebApp\Controllers\DeviceController.cs:line 562
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-13T22:52:00.3882516+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:53:00.5642031+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:56:00.7450765+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T22:58:00.7044345+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T23:00:00.7386587+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T23:01:00.9550348+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T23:06:00.5181731+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T23:15:00.5139324+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)
+2018-11-13T23:22:01.1137398+03:00  [WRN] Recurring job 'R-F-38' can not be scheduled due to job load exception. (3822ff3f)
+Hangfire.Common.JobLoadException: Could not load the job. See inner exception for the details. ---> System.InvalidOperationException: The type `CloudBackup.WebApp.Core.HangfireProvider` does not contain a method with signature `SendFileListCommand(Int32, Int32)`
+   at Hangfire.Storage.InvocationData.Deserialize()
+   --- End of inner exception stack trace ---
+   at Hangfire.Storage.InvocationData.Deserialize()
+   at Hangfire.Server.RecurringJobScheduler.TryScheduleJob(JobStorage storage, IStorageConnection connection, String recurringJobId, IReadOnlyDictionary`2 recurringJob)
+   at Hangfire.Server.RecurringJobScheduler.<>c__DisplayClass8_0.<Execute>b__0(IStorageConnection connection)

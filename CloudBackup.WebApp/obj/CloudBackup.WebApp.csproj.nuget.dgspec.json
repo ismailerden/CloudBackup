@@ -1,0 +1,259 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.WebApp\\CloudBackup.WebApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Database\\CloudBackup.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Database\\CloudBackup.Database.csproj",
+        "projectName": "CloudBackup.Database",
+        "projectPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Database\\CloudBackup.Database.csproj",
+        "packagesPath": "C:\\Users\\ismail.erden\\.nuget\\packages\\",
+        "outputPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ismail.erden\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Platforms\\CloudBackup.WebPlatforms.csproj": {
+                "projectPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Platforms\\CloudBackup.WebPlatforms.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[1.50.5, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Platforms\\CloudBackup.WebPlatforms.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Platforms\\CloudBackup.WebPlatforms.csproj",
+        "projectName": "CloudBackup.WebPlatforms",
+        "projectPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Platforms\\CloudBackup.WebPlatforms.csproj",
+        "packagesPath": "C:\\Users\\ismail.erden\\.nuget\\packages\\",
+        "outputPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Platforms\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ismail.erden\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.3.29.13, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.3.31, )"
+            },
+            "Google.Apis.Drive.v3": {
+              "target": "Package",
+              "version": "[1.36.1.1393, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.WebApp\\CloudBackup.WebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.WebApp\\CloudBackup.WebApp.csproj",
+        "projectName": "CloudBackup.WebApp",
+        "projectPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.WebApp\\CloudBackup.WebApp.csproj",
+        "packagesPath": "C:\\Users\\ismail.erden\\.nuget\\packages\\",
+        "outputPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.WebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ismail.erden\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Database\\CloudBackup.Database.csproj": {
+                "projectPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Database\\CloudBackup.Database.csproj"
+              },
+              "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Platforms\\CloudBackup.WebPlatforms.csproj": {
+                "projectPath": "C:\\Kişisel\\CloudBackup\\cloudbackup\\CloudBackup.Platforms\\CloudBackup.WebPlatforms.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.3.31.4, )"
+            },
+            "Google.Apis.Drive.v3": {
+              "target": "Package",
+              "version": "[1.36.1.1400, )"
+            },
+            "Google.Apis.Oauth2.v2": {
+              "target": "Package",
+              "version": "[1.36.1.1404, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.6.20, )"
+            },
+            "Hangfire.PostgreSql": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Serilog.Extensions.Logging.File": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

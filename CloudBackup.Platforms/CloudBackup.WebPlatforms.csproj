@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.3.29.13" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.31" />
+    <PackageReference Include="Google.Apis.Drive.v3" Version="1.36.1.1393" />
+  </ItemGroup>
+
+</Project>

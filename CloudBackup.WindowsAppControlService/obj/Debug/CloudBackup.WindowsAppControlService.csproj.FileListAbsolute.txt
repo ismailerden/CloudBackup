@@ -1,0 +1,17 @@
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\bin\Debug\CloudBackup.WindowsAppControlService.exe.config
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\bin\Debug\CloudBackup.WindowsAppControlService.exe
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\bin\Debug\CloudBackup.WindowsAppControlService.pdb
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\bin\Debug\RestSharp.dll
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\bin\Debug\RestSharp.xml
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\MainWindow.g.cs
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\App.g.cs
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService_MarkupCompile.cache
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService_MarkupCompile.lref
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\MainWindow.baml
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService.g.resources
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService.Properties.Resources.resources
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService.csproj.GenerateResource.cache
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService.csproj.CoreCompileInputs.cache
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService.csproj.CopyComplete
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService.exe
+C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsAppControlService\obj\Debug\CloudBackup.WindowsAppControlService.pdb

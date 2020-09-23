@@ -1,0 +1,64 @@
+﻿@model CloudBackup.Database.ViewModel.CreateModel.DeviceInsertModel
+@{
+
+}
+@section Scripts{
+    <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="/Scripts/device_joblist.js"></script>
+    <script>
+        $(document).ready(function () {
+            device_joblist.init('@ViewBag.DeviceId');
+        });
+    </script>
+}
+@section Heads {
+    <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            @Model.DeviceName Planları
+            <small>EBackup</small>
+        </h1>
+        <ol class="breadcrumb">
+
+            <li><a href="#"><i class="fa fa-dashboard"></i> Evdeki Bilgisayar  </a></li>
+            <li><a href="/Device/Index"> Cihazlar </a></li>
+        </ol>
+    </section>
+    <section class="content">
+
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Planlar</h3>
+            </div>
+
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div style="margin-bottom:10px; text-align:right;">
+                    <a class="btn btn-success ModalPopup" data-post-url="/Device/NewJob?deviceId=@ViewBag.DeviceId"  data-height="610px">Yeni Plan Ekle</a>
+                </div>
+                <table id="dtDevices" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Plan İsmi</th>
+                            <th>Plan Açıklaması</th>
+                            <th>Yedeklenecek Platform</th>
+                            <th>Zaman</th>
+                            <th>Son Çalıştırılan Zaman</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+
+    </section>
+</div>

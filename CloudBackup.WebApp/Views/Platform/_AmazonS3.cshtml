@@ -1,0 +1,177 @@
+﻿@model CloudBackup.Database.ViewModel.CreateModel.PlatformInsertModel
+@using Newtonsoft.Json.Linq
+@{
+    Layout = null;
+    dynamic d = null;
+    if (Model.JsonData != null)
+    {
+        d = JObject.Parse(Model.JsonData);
+    }
+
+}
+<script>
+
+    $(document).ready(function () {
+
+      
+    });
+</script>
+<div class="form-group">
+    <label>ApiAccessKey</label>
+    <input type="text" id="Form:apiAccessKey" name="Form:apiAccessKey" value="@(Model.JsonData!=null ?  d.apiAccessKey : "")" class="form-control ApiAccessKey">
+</div>
+<div class="form-group">
+    <label>ApiSecretKey</label>
+    <input type="text" id="Form:apiSecretKey" name="Form:apiSecretKey" value="@(Model.JsonData!=null ?  d.apiSecretKey : "")" class="form-control ApiSecretKey">
+</div>
+<div class="form-group">
+    <label>Region</label>
+    <select id="Form:region" name="Form:region" class="form-control Region">
+        @if ((Model.JsonData != null ? d.region : "") == "USWest1")
+        {
+            <option selected value="USWest1">USWest1</option>
+        }
+        else
+        {
+            <option value="USWest1">USWest1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "USWest2")
+        {
+            <option selected value="USWest2">USWest2</option>
+        }
+        else
+        {
+            <option value="USWest2">USWest2</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "APNortheast1")
+        {
+            <option selected value="APNortheast1">APNortheast1</option>
+        }
+        else
+        {
+            <option value="APNortheast1">APNortheast1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "APNortheast2")
+        {
+            <option selected value="APNortheast2">APNortheast2</option>
+        }
+        else
+        {
+            <option value="APNortheast2">APNortheast2</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "APSouth1")
+        {
+            <option selected value="APSouth1">APSouth1</option>
+        }
+        else
+        {
+            <option value="APSouth1">APSouth1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "APSoutheast1")
+        {
+            <option selected value="APSoutheast1">APSoutheast1</option>
+        }
+        else
+        {
+            <option value="APSoutheast1">APSoutheast1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "APSoutheast2")
+        {
+            <option selected value="APSoutheast2">APSoutheast2</option>
+        }
+        else
+        {
+            <option value="APSoutheast2">APSoutheast2</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "CACentral1")
+        {
+            <option selected value="CACentral1">CACentral1</option>
+        }
+        else
+        {
+            <option value="CACentral1">CACentral1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "CNNorth1")
+        {
+            <option selected value="CNNorth1">CNNorth1</option>
+        }
+        else
+        {
+            <option value="CNNorth1">CNNorth1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "CNNorthWest1")
+        {
+            <option selected value="CNNorthWest1">CNNorthWest1</option>
+        }
+        else
+        {
+            <option value="CNNorthWest1">CNNorthWest1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "EUCentral1")
+        {
+            <option selected value="EUCentral1">EUCentral1</option>
+        }
+        else
+        {
+            <option value="EUCentral1">EUCentral1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "EUWest1")
+        {
+            <option selected value="EUWest1">EUWest1</option>
+        }
+        else
+        {
+            <option value="EUWest1">EUWest1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "EUWest2")
+        {
+            <option selected value="EUWest2">EUWest2</option>
+        }
+        else
+        {
+            <option value="EUWest2">EUWest2</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "EUWest3")
+        {
+            <option selected value="EUWest3">EUWest3</option>
+        }
+        else
+        {
+            <option value="EUWest3">EUWest3</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "SAEast1")
+        {
+            <option selected value="SAEast1">SAEast1</option>
+        }
+        else
+        {
+            <option value="SAEast1">SAEast1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "USEast1")
+        {
+            <option selected value="USEast1">USEast1</option>
+        }
+        else
+        {
+            <option value="USEast1">USEast1</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "USEast2")
+        {
+            <option selected value="USEast2">USEast2</option>
+        }
+        else
+        {
+            <option value="USEast2">USEast2</option>
+        }
+        @if ((Model.JsonData != null ? d.region : "") == "USGovCloudWest1")
+        {
+            <option selected value="USGovCloudWest1">USGovCloudWest1</option>
+        }
+        else
+        {
+            <option value="USGovCloudWest1">USGovCloudWest1</option>
+        }
+
+
+    </select>
+</div>

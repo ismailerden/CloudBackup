@@ -1,0 +1,60 @@
+﻿@model CloudBackup.Database.ViewModel.CreateModel.DeviceInsertModel
+@{
+    Layout = "_ModalLayout";
+}
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+
+        @if(Model.CloseModal)
+        {
+            @:top.$('#modal-').modal('toggle');
+        }
+
+        $(".CloseModal").click(function () {
+                    top.$('#modal-').modal('toggle');
+                });
+        });
+    </script>
+}
+@section Heads {
+
+}
+
+<div class="modal-header">
+    <button type="button" class="close CloseModal" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Cihaz Ekle</h4>
+</div>
+<form role="form" asp-controller="Device" asp-action="New">
+    <div class="modal-body">
+        <input type="hidden" asp-for="HashedDeviceId" />
+        <!-- text input -->
+        <div class="form-group">
+            <label>Cihaz Adı </label>
+            <input type="text" asp-for="DeviceName" class="form-control" placeholder="Cihaz İsmi Giriniz">
+        </div>
+        <!-- text input -->
+        <div class="form-group">
+            <label>Cihaz Açıklaması </label>
+            <textarea type="text" asp-for="DeviceDescription" class="form-control" placeholder="Cihaz Açıklaması Giriniz"></textarea>
+        </div>
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left CloseModal" data-dismiss="modal">Kapat</button>
+        @if (String.IsNullOrEmpty(Model.HashedDeviceId))
+        {
+            <button type="submit" class="btn btn-primary">Ekle</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-primary">Düzenle</button>
+        }
+    </div>
+
+</form>

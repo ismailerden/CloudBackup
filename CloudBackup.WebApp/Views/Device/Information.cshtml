@@ -1,0 +1,47 @@
+﻿@model CloudBackup.Database.ViewModel.DeviceApiInformation
+@{
+    Layout = "_ModalLayout";
+}
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+         $(".CloseModal").click(function () {
+                    top.$('#modal-').modal('toggle');
+                });
+        });
+    </script>
+}
+@section Heads {
+
+}
+
+<div class="modal-header">
+    <button type="button" class="close CloseModal" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">@Model.Name Cihaz Api Bilgileri</h4>
+</div>
+<form role="form">
+    <div class="modal-body">
+
+        <!-- text input -->
+        <div class="form-group">
+            <label>Api Access Key </label>
+            <input type="text" class="form-control" disabled value="@Model.ApiAccessKey" placeholder="Cihaz İsmi Giriniz">
+        </div>
+        <!-- text input -->
+        <div class="form-group">
+            <label>Api Secret Key </label>
+            <input type="text" value="@Model.ApiSecretKey" disabled class="form-control" placeholder="Cihaz İsmi Giriniz">
+        </div>
+        
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left CloseModal" data-dismiss="modal">Kapat</button>
+        <a href="/Device/ReloadApiInformation?id=@Model.HashedDeviceId" class="btn btn-warning pull-left">Bilgileri Sıfırla</a>
+
+    </div>
+
+</form>

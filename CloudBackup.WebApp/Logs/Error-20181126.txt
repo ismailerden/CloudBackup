@@ -1,0 +1,19 @@
+2018-11-26T23:27:17.0957678+03:00 0HLIJRJEH2UKQ:0000004D [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.TimeoutException: The operation has timed out.
+   at Npgsql.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 300
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 153
+   at Hangfire.PostgreSql.PostgreSqlMonitoringApi.UseConnection[T](Func`2 action)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Hangfire.Dashboard.DashboardMetrics.<>c.<.cctor>b__1_0(RazorPage page)
+   at Hangfire.Dashboard.JsonStats.Dispatch(DashboardContext context)
+   at Hangfire.Dashboard.AspNetCoreDashboardMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

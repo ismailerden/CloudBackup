@@ -1,0 +1,13 @@
+﻿'C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsService\bin\Debug\CloudBackup.WindowsService.exe' derlemesi yükleniyor.
+Etkilenen parametreler şunlardır:
+   logtoconsole = 
+   logfile = C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsService\bin\Debug\CloudBackup.WindowsService.InstallLog
+   assemblypath = C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsService\bin\Debug\CloudBackup.WindowsService.exe
+ECloudBackup Service hizmeti yükleniyor...
+ECloudBackup Service hizmeti başarıyla yüklendi.
+Application günlüğünde ECloudBackup Service EventLog kaynağı oluşturuluyor...
+'C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsService\bin\Debug\CloudBackup.WindowsService.exe' derlemesi tamamlanıyor.
+Etkilenen parametreler şunlardır:
+   logtoconsole = 
+   logfile = C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsService\bin\Debug\CloudBackup.WindowsService.InstallLog
+   assemblypath = C:\Kişisel\Projeler\CloudBackup\CloudBackup.WindowsService\bin\Debug\CloudBackup.WindowsService.exe
