@@ -11,7 +11,10 @@ namespace CloudBackup.WebApp.Controllers
     {
         public CoreController(IMemoryCache cache) : base(cache)
         {
-
+            int test = 1; 
+            if (test>3){
+            console.log("test");
+            }
         }
         public IActionResult SSS()
         {
